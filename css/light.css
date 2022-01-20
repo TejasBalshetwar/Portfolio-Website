@@ -1,0 +1,223 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+/* Global CSS */
+:root{
+    --red:#dd1c1a;
+    --dark:#01101d;
+    --light:#f6f6f6;
+    --lblue:#bfcde0;
+    --orangeL:#f89e17;
+    --redL:#c90f0d;
+    --blue:#6cabff;
+    --blueL:#275ba5;
+    --ffamily:'Noto Sans', sans-serif;
+    --darkShadowSm:4px 4px 15px rgba(211,211,211,0.158);
+    --darkShadowLg:2px 2px 10px rgba(211,211,211,0.158);
+}
+body.light{
+    background-color: var(--light);
+    color:var(--dark);
+    /* stop horizontal scroll */
+    overflow-x:hidden;
+}
+body.light a{
+    color: var(--dark);
+}
+body.light .title{
+    color:var(--blueL);
+}
+
+/* Navbar CSS */
+
+body.light .navbar{
+    box-shadow: var(--darkShadowLg);
+    background-color: var(--dark);
+    color: var(--light);
+}
+body.light .navbar .logo a{
+    color: var(--light);
+}
+
+body.light .navbar .navTheme:hover{
+    color:var(--orangeL);
+}
+
+
+body.light .navbar .navLinks .navLink{
+    color: var(--light);
+}
+body.light .navbar .navLinks .navLink:hover{
+    color: var(--orangeL);
+}
+
+/* Theme button CSS */
+
+
+/* Hero Section CSS */
+
+body.light .hero .hero-btns .btn1{
+    border: 2px solid var(--orangeL);
+    color: var(--dark);
+}
+body.light .hero .hero-btns .btn1:hover{
+    background-color: var(--orangeL);
+    color: var(--dark);
+}
+body.light .hero .hero-btns .btn2{
+    background-color: var(--orangeL);
+    color: var(--dark);
+}
+
+/* About Section CSS */
+
+/* Skils section CSS */
+
+
+body.light .skills .card-row .card{
+    box-shadow: 1px 1px 8px #00000052;;
+
+}
+body.light .skills .card-row .card .card-icon .material-icons{
+    color: var(--orangeL);
+}
+
+body.light .skills .card-row .card .card-contentLg{
+    background-color: var(--orangeL);
+    color: var(--dark);
+}
+
+/* Projects CSS */
+
+body.light .projects .card-row .card img{
+    box-shadow: 1px 1px 8px #0000006c;
+}
+body.light .projects .card-row .card:hover img{
+    box-shadow: 2px 2px 8px #000000;
+}
+/* Contact CSS */
+body.light .contact .icon-row .icon:hover{
+    transform: translateY(-15%);
+    color: var(--orangeL);
+}
+/* Footer Section CSS */
+body.light .footer{
+    box-shadow: var(--darkShadowSm);
+}
+body.light .footer a:hover{
+    color: var(--orangeL);
+}
+/* Responsive */
+
+@media screen and (max-width:860px){
+    /* Global CSS changes */
+    /* Navbar Section */
+
+    body.light .navbar{
+        box-shadow: var(--darkShadowSm);
+    }
+    body.light .navbar .logo,
+    body.light .navbar .navTheme{
+        display: none;
+    }
+    body.light .navbar .navLinks{
+        width:100%;
+    }
+    body.light .navbar .navLinks ul{
+        height: 8vh;
+        width:100%;
+        /* padding:0 40px; */
+        display: flex;
+        flex-direction: row !important;
+        justify-content: space-evenly;
+        align-items: space-evenly;
+    }
+    /* Theme button */
+    body.light .theme{
+        display: block;
+        position: absolute;
+        top:25px;
+        left:25px;
+        cursor: pointer;
+        transition: all 200ms ease-in-out;
+    }
+    body.light .theme:hover{
+        color:var(--orangeL);
+        transform: scale(1.08);
+    }
+    /* Hero section */
+    body.light .hero .hero-img img{
+        width:200px;
+        margin-bottom: 20px;
+    }
+    body.light .hero .hero-title{
+        font-size:28px ;
+    }
+    body.light .hero .hero-btns{
+        flex-direction: column;
+        font-size: 14px;
+    }
+    /* About Section */
+    
+    body.light .about .about-content{
+        font-size: 20px;
+        width:100%;
+        margin-top: 20px;
+        line-height: 25px;
+    }
+    /* Skills Section */
+    body.light .skills .card-row{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    body.light .skills .card-row .card{
+        width: 180px;
+        height:170px;
+        padding: 25px;
+        align-items: flex-start;
+        overflow: visible;
+    }
+    body.light .skills .card-row .card .card-icon .material-icons{
+        font-size:43px ;
+    }
+    body.light .skills .card-row .card .card-title{
+        font-size: 22px;
+    }
+    body.light .skills .card-row .card .card-contentLg{
+        display: none;
+    }
+    body.light .skills .card-row .card .card-contentSm{
+        display: block;
+        position: absolute;
+        left:80%;
+        width:100%;
+        height: 99%;
+        background-color: var(--orangeL);
+        border-radius: 8px;
+        padding: 15px;
+        color: var(--dark);
+        font-size: 15px;
+        font-weight: 500;
+    }
+    /*Projects Section  */
+    body.light .projects .card-row{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    body.light .projects .card-row .card{
+        width:80%;
+    }
+    /* Contact Section */
+    body.light .contact .icon-row .icon{
+        font-size: 25px;
+        padding-right: 20px;
+    }
+/*footer  */
+.footer{
+    margin-left: 0;
+    padding: 50px 30px;
+}
+}
