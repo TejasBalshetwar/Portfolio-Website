@@ -139,7 +139,7 @@ body ul{
     align-items: center;
 }
 .hero .hero-img img{
-    width:300px;
+    width:320px;
     margin-bottom: 30px;
     border:2px solid var(--dark);
 }
